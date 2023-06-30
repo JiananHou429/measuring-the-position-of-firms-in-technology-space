@@ -104,7 +104,7 @@ cosine_similarity_vector<-cos.out[!fliplr(lower.tri(cos.out,diag=TRUE))]
 proc.time() - ptm
 
 ## export similarity matrix to a csv file
-simi_1980$cos<-cosine_similarity_vector
+simi_1980$similarity_tfidf<-cosine_similarity_vector
 simp_text$gvkey1<-NULL
 simi_1980<-merge(x=simi_1980,y=simp_text,by="order1",all=FALSE)
 simi_1980<-simi_1980[,c(1:4)]
@@ -114,6 +114,5 @@ simi_1980<-merge(x=simi_1980,y=simp_text,by="order",all=FALSE)
 simi_1980<-simi_1980[,c(1:5)]
 colnames(simi_1980)[c(2)]<-"order1"
 colnames(simi_1980)[c(5)]<-"gvkey2"
-colnames(simi_1980)[c(3)]<-"similarity_tfidf"
 simi_1980$year <-1980
 write.csv(simi_1980, file = "simi_1980_tfidf.csv")
