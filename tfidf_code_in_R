@@ -114,4 +114,6 @@ simi_1980<-merge(x=simi_1980,y=simp_text,by="order",all=FALSE)
 simi_1980<-simi_1980[,c(1:5)]
 colnames(simi_1980)[c(2)]<-"order1"
 colnames(simi_1980)[c(5)]<-"gvkey2"
-write.csv(simi_1980, file = "simi_1980.csv")
+colnames(simi_1980)[c(3)]<-"similarity_tfidf"
+simi_1980$year <-1980
+write.csv(simi_1980, file = "simi_1980_tfidf.csv")
