@@ -65,6 +65,7 @@ cos.out<-t(cos.out)
 cosine_similarity_vector<-cos.out[!fliplr(lower.tri(cos.out,diag=TRUE))]
 proc.time() - ptm
 
+## export to a csv file 
 simi_1980$similarity_doc2vec<-cosine_similarity_vector
 write.csv(simi_1980, file = "simi_1980_doc2vec.csv")
 
