@@ -17,7 +17,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 df = pd.read_csv('./data/all_patent_text.csv.csv')
 
 # Create a list of TaggedDocument objects.
-documents = [TaggedDocument(doc, [i]) for i, doc in zip(df['patentId'], df['patentText'])]
+documents = [TaggedDocument(doc, [i]) for i, doc in zip(df['patent'], df['text'])]
 
 # Initialize a Doc2Vec model with a vector size of 700 and window size of 5.
 model = Doc2Vec(vector_size=700, window=5)
@@ -25,7 +25,7 @@ model = Doc2Vec(vector_size=700, window=5)
 # Build a vocabulary from the documents
 model.build_vocab(documents)
 
-# Train the model on the documents for 10 epochs.
+# Train the model on the documents for 10 epochs. "total_examples" is optional
 model.train(documents, total_examples=model.corpus_count, epochs=10)
 
 # Save the trained model for later use
@@ -35,7 +35,7 @@ model.save("patent_doc2vec.model")
 df_vectors = pd.DataFrame()
 
 # Iterate over all patents
-for patentId in df['patentId']:
+for patentId in df['patent']:
     # Retrieve the vector for the patent from the trained model
     vector = model.dv[patentId]
 
