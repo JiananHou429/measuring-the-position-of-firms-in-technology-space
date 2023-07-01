@@ -5,4 +5,7 @@ If you use the code or data, please cite the following paper:
 
 Arts S, Cassiman B, Hou J. (2023). Measuring the Position and Differentiation of Firms in Technology Space. Forthcoming **Management Science**. 
 
-We include two pieces of code. The first piece documents how to use tfidf to characterize a firm's technology portfolio and calculate the similarity between firm technology portfolios. The second piece uses doc2vec to characterize a firm's technology portfolio and calculate the similarity between firm technology portfolios.
+We include two batches of code:
+
+- The first batch shows how to use tfidf to characterize a firm's technology portfolio and calculate the similarity between firm technology portfolios
+- The second batch shows how to train doc2vec to characterize a firm's technology portfolio and calculate the similarity between firm technology portfolios
