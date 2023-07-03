@@ -45,7 +45,7 @@ tf.idf <- function(tf, idf) {
 }
 
 ## data loading
-setwd("~/Desktop/Measuring_position_and_differentiation_of_firms/tfidf_simi")
+setwd("./data/")
 ## the following patent texts are collected from Arts et al. (2021) https://zenodo.org/record/3515985   
 all_patent_text <- read_csv("all_patent_text.csv")
 ## Relying on patent linkages by Arora et al. (2021), we construct the patent portfolio 
