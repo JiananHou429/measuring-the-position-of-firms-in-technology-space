@@ -22,7 +22,7 @@ library(tilting)
 library(tidyverse)
 
 # Set working directory
-setwd("./data/doc2vec")
+setwd("./data/")
 
 # Import patent vectors and patent portfolio data
 vectors <- read_csv("./data/patents_vectors.csv")
