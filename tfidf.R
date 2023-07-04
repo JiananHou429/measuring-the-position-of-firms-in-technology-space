@@ -48,9 +48,10 @@ tf.idf <- function(tf, idf) {
 setwd("./data/")
 ## the following patent texts are collected from Arts et al. (2021) https://zenodo.org/record/3515985   
 all_patent_text <- read_csv("all_patent_text.csv")
-## Relying on patent linkages by Arora et al. (2021), we construct the patent portfolio 
-## of a firm i in year t by collecting all patents owned by i with filing years between 
-## year t-5 and year t-1. 
+
+# "patent_portfolio" is compiled based on the "patent-gvkey" linkages developed by Arora et al. (2021) (see 
+# https://zenodo.org/record/3594743). For each firm i in year t, it documents patents contained in the portfolio (with filing years between t-5
+# and t-1). The file contains one row and three columns for each "gvkey-patent" linkage. The first column contains gvkey, the second column contains year, and third column contains patent number. 
 patent_portfolio <- read_csv("patent_portfolio.csv")
                    
 p1980<-subset(patent_portfolio,year==1980)
