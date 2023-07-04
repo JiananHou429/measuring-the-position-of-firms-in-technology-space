@@ -26,7 +26,12 @@ library(tidyverse)
 setwd("./data/")
 
 # Import patent vectors and patent portfolio data
+# "patents_vectors" is the output of doc2vec_training which summarizes each patent as a vector of 700 dimensions. 
 vectors <- read_csv("./data/patents_vectors.csv")
+
+# "patent_portfolio" is compiled based on the "patent-gvkey" linkages developed by Arora et al. (2021) (see 
+# https://zenodo.org/record/3594743). For each firm i in year t, it documents patents contained in the portfolio (with filing years between t-5
+# and t-1). The file contains one row and three columns for each "gvkey-patent" linkage. The first column contains gvkey, the second column contains year, and third column contains patent number. 
 patent_portfolio <- read_csv("./data/patent_portfolio.csv")
 
 # Load 1980 technology similarity data and remove unnecessary columns
