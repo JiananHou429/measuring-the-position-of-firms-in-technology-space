@@ -11,4 +11,4 @@ We include three batches of code:
 - The second batch (doc2vec_training.py) shows how to train doc2vec to create patent level embeddings 
 - The third batch (doc2vec.R) shows how to use doc2vec to characterize a firm's technology portfolio and calculate the similarity between firm technology portfolios
 
-It is suggested to run the code locally and creating an additional folder called `./data/` in which download the data from the Zenodo repository.
+It is suggested to run the code locally and creating an additional folder called `./data/` in which the data from the Zenodo repository can be downloaded.
