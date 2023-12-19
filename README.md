@@ -1,6 +1,6 @@
 This code is part of the paper:
 
-Arts S, Cassiman B, Hou J. (2023). Position and Differentiation of Firms in Technology Space. Forthcoming **Management Science**. https://doi.org/10.1287/mnsc.2023.00282
+Arts S, Cassiman B, Hou J. (2023). Position and Differentiation of Firms in Technology Space. **Management Science** 69 (12): 7253-7265. https://doi.org/10.1287/mnsc.2023.00282
 
 All data is available from https://zenodo.org/record/5172146. 
 
